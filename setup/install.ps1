@@ -1,4 +1,4 @@
-$account = "jayharris"
+$account = "silpheel"
 $repo    = "dotfiles-windows"
 $branch  = "master"
 
@@ -61,4 +61,3 @@ $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
 $newProcess.Arguments = "-nologo";
 [System.Diagnostics.Process]::Start($newProcess);
 exit
-

@@ -29,6 +29,7 @@ if (Get-Command ls.exe -ErrorAction SilentlyContinue | Test-Path) {
     ${function:ls} = { ls.exe --color @args }
     # List all files in long format
     ${function:l} = { ls -lF @args }
+    ${function:ll} = { ls -l @args }
     # List all files in long format, including hidden files
     ${function:la} = { ls -laF @args }
     # List only directories
