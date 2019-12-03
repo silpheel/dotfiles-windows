@@ -122,33 +122,33 @@ gem pristine --all --env-shebang
 ### Windows Features
 Write-Host "Installing Windows Features..." -ForegroundColor "Yellow"
 # IIS Base Configuration
-Enable-WindowsOptionalFeature -Online -All -FeatureName `
-    "IIS-BasicAuthentication", `
-    "IIS-DefaultDocument", `
-    "IIS-DirectoryBrowsing", `
-    "IIS-HttpCompressionDynamic", `
-    "IIS-HttpCompressionStatic", `
-    "IIS-HttpErrors", `
-    "IIS-HttpLogging", `
-    "IIS-ISAPIExtensions", `
-    "IIS-ISAPIFilter", `
-    "IIS-ManagementConsole", `
-    "IIS-RequestFiltering", `
-    "IIS-StaticContent", `
-    "IIS-WebSockets", `
-    "IIS-WindowsAuthentication" `
-    -NoRestart | Out-Null
+#Enable-WindowsOptionalFeature -Online -All -FeatureName `
+#    "IIS-BasicAuthentication", `
+#    "IIS-DefaultDocument", `
+#    "IIS-DirectoryBrowsing", `
+#    "IIS-HttpCompressionDynamic", `
+#    "IIS-HttpCompressionStatic", `
+#    "IIS-HttpErrors", `
+#    "IIS-HttpLogging", `
+#    "IIS-ISAPIExtensions", `
+#    "IIS-ISAPIFilter", `
+#    "IIS-ManagementConsole", `
+#    "IIS-RequestFiltering", `
+#    "IIS-StaticContent", `
+#    "IIS-WebSockets", `
+#    "IIS-WindowsAuthentication" `
+#    -NoRestart | Out-Null
 
 # ASP.NET Base Configuration
-Enable-WindowsOptionalFeature -Online -All -FeatureName `
-    "NetFx3", `
-    "NetFx4-AdvSrvs", `
-    "NetFx4Extended-ASPNET45", `
-    "IIS-NetFxExtensibility", `
-    "IIS-NetFxExtensibility45", `
-    "IIS-ASPNET", `
-    "IIS-ASPNET45" `
-    -NoRestart | Out-Null
+#Enable-WindowsOptionalFeature -Online -All -FeatureName `
+#    "NetFx3", `
+#    "NetFx4-AdvSrvs", `
+#    "NetFx4Extended-ASPNET45", `
+#    "IIS-NetFxExtensibility", `
+#    "IIS-NetFxExtensibility45", `
+#    "IIS-ASPNET", `
+#    "IIS-ASPNET45" `
+#    -NoRestart | Out-Null
 
 # Web Platform Installer for remaining Windows features
 webpicmd /Install /AcceptEula /Products:"UrlRewrite2"
