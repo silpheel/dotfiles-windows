@@ -72,7 +72,7 @@ function Get-SoundVolume {
   Set-SoundUnmute
 
   .LINK
-  https://github.com/jayharris/dotfiles-windows/
+  https://github.com/silpheel/dotfiles-windows/
   #>
   [math]::Round([Audio]::Volume * 100)
 }
@@ -105,7 +105,7 @@ function Set-SoundVolume([Parameter(mandatory=$true)][Int32] $Volume) {
   Set-SoundUnmute
 
   .LINK
-  https://github.com/jayharris/dotfiles-windows/
+  https://github.com/silpheel/dotfiles-windows/
   #>
   [Audio]::Volume = ($Volume / 100)
 }
@@ -127,7 +127,7 @@ function Set-SoundMute {
   Set-SoundUnmute
 
   .LINK
-  https://github.com/jayharris/dotfiles-windows/
+  https://github.com/silpheel/dotfiles-windows/
   #>
    [Audio]::Mute = $true
 }
@@ -149,7 +149,7 @@ function Set-SoundUnmute {
   Set-SoundMute
 
   .LINK
-  https://github.com/jayharris/dotfiles-windows/
+  https://github.com/silpheel/dotfiles-windows/
   #>
    [Audio]::Mute = $false
 }
