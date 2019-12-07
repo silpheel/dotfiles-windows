@@ -188,3 +188,6 @@ function Convert-ConsoleColor {
 
 # Map HKEY_CLASSES_ROOT to HKCR: (https://blogs.msdn.microsoft.com/lior/2009/06/18/what-no-hkcr-in-powershell/)
 New-PSDrive -Name HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT  -ErrorAction SilentlyContinue
+
+# More bash-like tab completion
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
