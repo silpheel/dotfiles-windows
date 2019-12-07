@@ -1,12 +1,12 @@
 # Check to see if we are currently running "as Administrator"
-if (!(Verify-Elevated)) {
-   $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
-   $newProcess.Arguments = $myInvocation.MyCommand.Definition;
-   $newProcess.Verb = "runas";
-   [System.Diagnostics.Process]::Start($newProcess);
-
-   exit
-}
+# if (!(Verify-Elevated)) {
+#    $newProcess = new-object System.Diagnostics.ProcessStartInfo "PowerShell";
+#    $newProcess.Arguments = $myInvocation.MyCommand.Definition;
+#    $newProcess.Verb = "runas";
+#    [System.Diagnostics.Process]::Start($newProcess);
+#
+#    exit
+# }
 
 ###############################################################################
 ### Security and Identity                                                     #
@@ -85,7 +85,7 @@ Set-ItemProperty "HKCU:\SOFTWARE\Microsoft\InputPersonalization" "RestrictImplic
 if (!(Test-Path "HKCU:\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore")) {New-Item -Path "HKCU:\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore" -Type Folder | Out-Null}
 Set-ItemProperty "HKCU:\SOFTWARE\Microsoft\InputPersonalization\TrainedDataStore" "HarvestContacts" 0
 Set-ItemProperty "HKCU:\SOFTWARE\Microsoft\Personalization\Settings" "AcceptedPrivacyPolicy" 0
-Set-ItemProperty "HKCU:\SOFTWARE\Microsoft\Speech_OneCore\Settings\OnlineSpeechPrivacy" "HasAccepted" 0
+Set-ItemProperty "HKCU:\SOFTWARE\Microsoft\Speech_OneCore\Settings\OnlineSpeechPrivacy" "HasAccepted" 0 -ErrorAction SilentlyContinue
 
 # Account Info: Don't let apps access name, picture, and other account info: Allow, Deny
 # Build 1709
@@ -643,6 +643,16 @@ Set-PSReadlineOption -Colors @{
     "Emphasis"  = "#f0a0c0"
     "Error"     = "#902020"
 }
+
+
+# Allow pinning almost anything to Start (https://www.winhelponline.com/blog/pin-any-file-start-screen-windows-10-tweak/)
+Set-Itemproperty -path 'HKCR:\AllFileSystemObjects\shellex\ContextMenuHandlers' -Name ' {470C0EBD-5D73-4d58-9CED-E91E22E23282}' -value 'Pin to Start' -Force
+
+
+# Add "Open command prompt here" in Windows 10
+TakeRegKeyOwnership("HKCR:\Directory\shell\cmd")
+TakeRegKeyFullControl("HKCR:\Directory\shell\cmd")
+Rename-ItemProperty -Path "HKCR:\Directory\shell\cmd" -Name "HideBasedOnVelocityId" -NewName "ShowBasedOnVelocityId"
 
 # Remove property overrides from PowerShell and Bash shortcuts
 Reset-AllPowerShellShortcuts
