@@ -186,3 +186,5 @@ function Convert-ConsoleColor {
     return [BitConverter]::ToInt32($bytes, 0)
 }
 
+# Map HKEY_CLASSES_ROOT to HKCR: (https://blogs.msdn.microsoft.com/lior/2009/06/18/what-no-hkcr-in-powershell/)
+New-PSDrive -Name HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT  -ErrorAction SilentlyContinue
