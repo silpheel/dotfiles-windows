@@ -132,4 +132,42 @@ if (which npm) {
 # }
 
 ### Atom PackageSource
-# TODO
+apm install atom-beautify
+apm install atom-django
+apm install atom-html-preview
+apm install atom-python-virtualenv
+apm install atom-unsaved-changes
+apm install autoclose-html
+apm install autocomplete-python
+apm install busy-signal
+apm install docblock-python
+apm install docblockr
+apm install editorconfig
+apm install emmet
+apm install hey-pane
+apm install Hydrogen
+apm install intentions
+apm install linter
+apm install linter-pylama
+apm install linter-ui-default
+apm install markdown-preview-plus
+apm install markdown-writer
+apm install minimap
+apm install minimap-bookmarks
+apm install minimap-cursorline
+apm install minimap-find-and-replace
+apm install minimap-git-diff
+apm install minimap-lens
+apm install minimap-linter
+apm install minimap-pigments
+apm install minimap-split-diff
+apm install pigments
+apm install python-tools
+apm install regex-railroad-diagram
+# apm install regex-tester
+apm install sort-lines
+apm install split-diff
+apm install tablr
+apm install terminal-plus
+apm install todo-show
+apm install zentabs
