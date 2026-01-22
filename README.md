@@ -30,7 +30,7 @@ Note: You must have your execution policy set to unrestricted (or at least in by
 To install these dotfiles from PowerShell without Git:
 
 ```bash
-iex ((new-object net.webclient).DownloadString('https://raw.github.com/silpheel/dotfiles-windows/master/setup/install.ps1'))
+iex ((new-object net.webclient).DownloadString('https://raw.github.com/silpheel/dotfiles-windows/feature/silpheel/setup/install.ps1'))
 ```
 
 To update later on, just run that command again.
