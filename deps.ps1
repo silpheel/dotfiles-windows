@@ -40,6 +40,8 @@ winget install Microsoft.Sysinternals.ProcessExplorer    --silent --accept-packa
 winget install Microsoft.PowerToys                       --silent --accept-package-agreements --accept-source-agreements
 winget install AntibodySoftware.Wiztree                  --silent --accept-package-agreements --accept-source-agreements
 winget install CrystalDewWorld.CrystalDiskInfo           --silent --accept-package-agreements --accept-source-agreements
+winget install Oracle.MySQLWorkbench                     --silent --accept-package-agreements --accept-source-agreements
+winget install SamHocevar.WinCompose                     --silent --accept-package-agreements --accept-source-agreements
 
 Refresh-Environment
 
