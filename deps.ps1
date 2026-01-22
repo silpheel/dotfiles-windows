@@ -14,12 +14,14 @@ winget install Git.Git                                   --silent --accept-packa
 winget install OpenJS.NodeJS                             --silent --accept-package-agreements --accept-source-agreements
 winget install Python.Python.3.12                        --silent --accept-package-agreements --accept-source-agreements
 winget install RubyInstallerTeam.Ruby.3.2                --silent --accept-package-agreements --accept-source-agreements
+winget install OpenSSH                                   --silent --accept-package-agreements --accept-source-agreements
+New-NetFirewallRule -Name "OpenSSH Server (sshd)" -DisplayName "OpenSSH Server (sshd)" -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 
 # browsers
 #winget install Google.Chrome                             --silent --accept-package-agreements --accept-source-agreements
 #winget install Mozilla.Firefox                           --silent --accept-package-agreements --accept-source-agreements
 #winget install Opera.Opera                               --silent --accept-package-agreements --accept-source-agreements
-winget install --id=Waterfox.Waterfox -e                 --silent --accept-package-agreements --accept-source-agreements
+winget install Waterfox.Waterfox                         --silent --accept-package-agreements --accept-source-agreements
 
 # dev tools and frameworks
 winget install Microsoft.PowerShell                      --silent --accept-package-agreements --accept-source-agreements
@@ -33,6 +35,11 @@ winget install Vim.Vim                                   --silent --accept-packa
 #winget install Microsoft.Azure.StorageExplorer            --silent --accept-package-agreements --accept-source-agreements
 #winget install Microsoft.Azure.StorageEmulator            --silent --accept-package-agreements --accept-source-agreements
 #winget install Microsoft.ServiceFabricRuntime            --silent --accept-package-agreements --accept-source-agreements
+winget install VSCodium.VSCodium                         --silent --accept-package-agreements --accept-source-agreements
+winget install Microsoft.Sysinternals.ProcessExplorer    --silent --accept-package-agreements --accept-source-agreements
+winget install Microsoft.PowerToys                       --silent --accept-package-agreements --accept-source-agreements
+winget install AntibodySoftware.Wiztree                  --silent --accept-package-agreements --accept-source-agreements
+winget install CrystalDewWorld.CrystalDiskInfo           --silent --accept-package-agreements --accept-source-agreements
 
 Refresh-Environment
 
