@@ -42,6 +42,8 @@ winget install AntibodySoftware.Wiztree                  --silent --accept-packa
 winget install CrystalDewWorld.CrystalDiskInfo           --silent --accept-package-agreements --accept-source-agreements
 winget install Oracle.MySQLWorkbench                     --silent --accept-package-agreements --accept-source-agreements
 winget install SamHocevar.WinCompose                     --silent --accept-package-agreements --accept-source-agreements
+winget install CrystalDewWorld.CrystalDiskMark           --silent --accept-package-agreements --accept-source-agreements
+winget install alexx2000.DoubleCommander                 --silent --accept-package-agreements --accept-source-agreements
 
 Refresh-Environment
 
