@@ -1,3 +1,8 @@
 # The Extras file is secret.
 extra.ps1
 package-lock.json
+
+
+*.sync-conflict-*
+.idea
+.stfolder

@@ -11,6 +11,7 @@ if (!(Verify-Elevated)) {
 # system and cli
 winget install Microsoft.WebPICmd                        --silent --accept-package-agreements --accept-source-agreements
 winget install Git.Git                                   --silent --accept-package-agreements --accept-source-agreements --override "/VerySilent /NoRestart /o:PathOption=CmdTools /Components=""icons,assoc,assoc_sh,gitlfs"""
+winget install --id=GitHub.GitHubDesktop -e
 winget install OpenJS.NodeJS                             --silent --accept-package-agreements --accept-source-agreements
 winget install Python.Python.3.12                        --silent --accept-package-agreements --accept-source-agreements
 winget install RubyInstallerTeam.Ruby.3.2                --silent --accept-package-agreements --accept-source-agreements
@@ -18,23 +19,12 @@ winget install OpenSSH                                   --silent --accept-packa
 New-NetFirewallRule -Name "OpenSSH Server (sshd)" -DisplayName "OpenSSH Server (sshd)" -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 
 # browsers
-#winget install Google.Chrome                             --silent --accept-package-agreements --accept-source-agreements
-#winget install Mozilla.Firefox                           --silent --accept-package-agreements --accept-source-agreements
-#winget install Opera.Opera                               --silent --accept-package-agreements --accept-source-agreements
 winget install Waterfox.Waterfox                         --silent --accept-package-agreements --accept-source-agreements
 
 # dev tools and frameworks
 winget install Microsoft.PowerShell                      --silent --accept-package-agreements --accept-source-agreements
-#winget install Microsoft.SQLServer.2019.Developer        --silent --accept-package-agreements --accept-source-agreements
-#winget install Microsoft.SQLServerManagementStudio       --silent --accept-package-agreements --accept-source-agreements
-#winget install Microsoft.VisualStudio.2022.Professional  --silent --accept-package-agreements --accept-source-agreements --override "--wait --quiet --norestart --nocache --addProductLang En-us --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.NetWeb"
-#winget install JetBrains.dotUltimate                     --silent --accept-package-agreements --accept-source-agreements --override "/SpecificProductNames=ReSharper;dotTrace;dotCover /Silent=True /VsVersion=17.0"
+Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.NetWeb"
 winget install Vim.Vim                                   --silent --accept-package-agreements --accept-source-agreements
-#winget install WinMerge.WinMerge                         --silent --accept-package-agreements --accept-source-agreements
-#winget install Microsoft.AzureCLI                        --silent --accept-package-agreements --accept-source-agreements
-#winget install Microsoft.Azure.StorageExplorer            --silent --accept-package-agreements --accept-source-agreements
-#winget install Microsoft.Azure.StorageEmulator            --silent --accept-package-agreements --accept-source-agreements
-#winget install Microsoft.ServiceFabricRuntime            --silent --accept-package-agreements --accept-source-agreements
 winget install VSCodium.VSCodium                         --silent --accept-package-agreements --accept-source-agreements
 winget install Microsoft.Sysinternals.ProcessExplorer    --silent --accept-package-agreements --accept-source-agreements
 winget install Microsoft.PowerToys                       --silent --accept-package-agreements --accept-source-agreements
@@ -44,6 +34,20 @@ winget install Oracle.MySQLWorkbench                     --silent --accept-packa
 winget install SamHocevar.WinCompose                     --silent --accept-package-agreements --accept-source-agreements
 winget install CrystalDewWorld.CrystalDiskMark           --silent --accept-package-agreements --accept-source-agreements
 winget install alexx2000.DoubleCommander                 --silent --accept-package-agreements --accept-source-agreements
+
+# Other
+winget install -e --id LizardByte.Sunshine
+winget install --id=BillStewart.SyncthingWindowsSetup -e
+winget install --id=ZhornSoftware.Caffeine -e
+winget install --id=Microsoft.PowerToys -e
+winget install --id=Microsoft.WindowsTerminal -e
+winget install --id=Rufus.Rufus -e
+winget install --id=Python.Python.3.12 -e
+winget install --id=Starship.Starship -e
+winget install --id=Oracle.MySQLWorkbench -e
+winget install --id=CaddyServer.Caddy -e
+winget install --id=NSSM.NSSM -e
+winget install -e --id Apple.iCloud
 
 Refresh-Environment
 
